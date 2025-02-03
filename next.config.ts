@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // i18n: {
+  //   defaultLocale: 'th',
+  //   locales: ['th','en'],
+  //   localeDetection: false,
+  // },
+  // reloadOnPrerender: process.env.NODE_ENV === 'development',
 };
 
 export default nextConfig;
