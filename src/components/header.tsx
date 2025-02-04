@@ -3,7 +3,6 @@ import MobileMenuButton from "./mobile-menu-button";
 import MenuDesktop from "./menu-desktop";
 import TopBar from "./top-bar";
 import MobileMenu from "./mobile-menu";
-
   export default async function Header() {
   
     return (
@@ -28,7 +27,8 @@ import MobileMenu from "./mobile-menu";
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             {/* <MobileMenuButton /> */}
-            <MobileMenu/>
+
+<MobileMenu/>
           </div>
         </div>
       </div>

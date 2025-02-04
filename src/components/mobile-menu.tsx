@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react"
 import Link from "next/link"
+import { useI18n, useScopedI18n, useChangeLocale, useCurrentLocale }  from '@/hooks/useI18nClient';
 
 const insuranceProducts = [
   {
@@ -80,12 +81,12 @@ const menuItems: MenuItem[] = [
 
 
 export default function MobileMenu({ onClose }: MobileMenuProps) {
-
-
+  const t = useI18n();
   const [isOpen, setIsOpen] = useState(false)
   const [activeMenu, setActiveMenu] = useState<MenuItem | null>(null)
   return (
     <>
+    {t('insurOnline')}
     {/* Mobile Menu Button */}
     <button onClick={() => setIsOpen(true)} className="md:hidden p-2" aria-label="Open menu">
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
