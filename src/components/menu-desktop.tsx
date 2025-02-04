@@ -1,16 +1,33 @@
 import Link from "next/link"
 
-const navigation = [
-    { name: "ซื้อประกันออนไลน์", href: "#" },
+import { getI18n } from '@/hooks/useI18nServer';
+
+
+// const getNavigations = (): Array<string => {
+//   const navigations = [
+//     { name: t("insurOnline"), href: "#" },
+//     { name: "ประกันภัยรถบุคคล", href: "#" },
+//     { name: "ประกันภัยธุรกิจ", href: "#" },
+//     { name: "บริหารลูกค้า", href: "#" },
+//     { name: "รู้จักเรา", href: "#" },
+//     { name: "ร่วมงานกับเรา", href: "#" },
+//   ]
+//   return navigations;
+// };
+
+
+
+export default async function MenuDesktop() {
+  const t = await getI18n();
+
+  const navigations = [
+    { name: t("insurOnline"), href: "#" },
     { name: "ประกันภัยรถบุคคล", href: "#" },
     { name: "ประกันภัยธุรกิจ", href: "#" },
     { name: "บริหารลูกค้า", href: "#" },
     { name: "รู้จักเรา", href: "#" },
     { name: "ร่วมงานกับเรา", href: "#" },
   ]
-
-
-export default function MenuDesktop() {
 
     return (
         <header className="bg-white border-b">
@@ -27,7 +44,12 @@ export default function MenuDesktop() {
   
             {/* Main Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              <Link href="#" className="text-gray-700 hover:text-blue-600 text-sm font-medium">
+            {navigations.map((item, index) => (
+              <Link key={index} href={item.href} className="text-gray-700 hover:text-blue-600 text-sm font-medium">
+                {item.name}
+              </Link>
+            ))}
+              {/* <Link href="#" className="text-gray-700 hover:text-blue-600 text-sm font-medium">
                 ซื้อประกันออนไลน์
               </Link>
               <Link href="#" className="text-gray-700 hover:text-blue-600 text-sm font-medium">
@@ -44,7 +66,7 @@ export default function MenuDesktop() {
               </Link>
               <Link href="#" className="text-gray-700 hover:text-blue-600 text-sm font-medium">
                 ร่วมงานกับเรา
-              </Link>
+              </Link> */}
             </nav>
   
             {/* Right Section */}

@@ -4,17 +4,8 @@ import MenuDesktop from "./menu-desktop";
 import TopBar from "./top-bar";
 import MobileMenu from "./mobile-menu";
 
-const navigation = [
-    { name: "ซื้อประกันออนไลน์", href: "#" },
-    { name: "ประกันภัยรถบุคคล", href: "#" },
-    { name: "ประกันภัยธุรกิจ", href: "#" },
-    { name: "บริหารลูกค้า", href: "#" },
-    { name: "รู้จักเรา", href: "#" },
-    { name: "ร่วมงานกับเรา", href: "#" },
-  ]
-
-
-  export default async function Header({ locale }) {
+  export default async function Header() {
+  
     return (
         <header className="bg-white border-b">
     <TopBar/>
