@@ -1,6 +1,6 @@
 // import { setStaticParamsLocale } from 'next-international/server';
 import { getI18n } from '@/hooks/useI18nServer';
-import Header from "@/components/header";
+import Header from "@/components/layouts/header";
 
 // Uncomment to test Static Generation on this page only
 // export function generateStaticParams() {

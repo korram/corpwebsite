@@ -14,6 +14,9 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ["images.axa-contento-118412.eu"], // Add the hostname here
+  },
   transpilePackages: ['next-international', 'international-types'],
   eslint: {
     ignoreDuringBuilds: true,

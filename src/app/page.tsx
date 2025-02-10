@@ -1,4 +1,4 @@
-import Header from "@/components/header";
+import Header from "@/components/layouts/header";
 // import { getDictionary } from '@/components/lang/dictionaries';
 import { getI18n } from '@/hooks/useI18nServer';
 export default async function Home({
