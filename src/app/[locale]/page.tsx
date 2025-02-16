@@ -1,24 +1,26 @@
-// import { setStaticParamsLocale } from 'next-international/server';
-import { getI18n } from '@/hooks/useI18nServer';
 import Header from "@/components/layouts/header";
 
-// Uncomment to test Static Generation on this page only
-// export function generateStaticParams() {
-//   return getStaticParams();
-// }
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
-  // const { locale } = await params;
-
-  // Uncomment to test Static Generation
-  // setStaticParamsLocale(locale);
-
-  // const t = await getI18n();
 
   return (
     <div>
      <Header/>
+     <div className="p-6">
+  {/* ใช้ฟอนต์ Publico */}
+  <h1 className="text-h1">This is an English Display</h1>
+      <h2  className="text-h2">Large Heading EN</h2>
+
+      {/* Display ภาษาไทย ใช้ DB HelvethaicaX */}
+      <h1 className="text-h1">นี่คือ Display ภาษาไทย</h1>
+      <h2 className="text-h2" >หัวข้อใหญ่ ภาษาไทย</h2>
+
+  {/* ใช้ฟอนต์ SansSerifPro */}
+  <p className="text-5xl font-bold">Display 1</p>
+  <p className="text-4xl">Display 2</p>
+
+  {/* ใช้ฟอนต์ DB Helvethaica X สำหรับภาษาไทย */}
+  <p className="text-xl">สวัสดีครับ นี่คือข้อความภาษาไทย</p>
+</div>
     </div>
   );
 }

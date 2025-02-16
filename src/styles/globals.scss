@@ -1,0 +1,301 @@
+html[lang="en"]  {
+    font-family: var(--font-source-sans), 'Arial', sans-serif;
+}
+
+html[lang="th"] {
+    font-family: var(--font-dbhelvethaica), Helvetica, 'Arial', sans-serif;
+}
+
+
+// html[lang="en"] .text-5xl,
+// html[lang="en"] .text-4xl,
+// html[lang="en"] .text-3xl,
+// html[lang="en"] .text-2xl,
+// html[lang="en"] .text-xl {
+//     font-family: var(--font-publico), 'Arial', sans-serif;
+// }
+
+// html[lang="th"] .text-5xl,
+// html[lang="th"] .text-4xl,
+// html[lang="th"] .text-3xl,
+// html[lang="th"] .text-2xl,
+// html[lang="th"] .text-xl {
+//     font-family: var(--font-dbhelvethaica), Helvetica, 'Arial', sans-serif;
+// }
+
+// html[lang="en"]  h1 {
+//     @apply text-h1-en;
+// }
+// html[lang="en"]  h2 {
+//     @apply text-h2-en;
+// }
+// html[lang="en"]  h3 {
+//     @apply text-h3-en;
+// }
+// html[lang="en"]  h4 {
+//     @apply text-h4-en;
+// }
+// html[lang="en"]  h5 {
+//     @apply text-h5-en;
+// }
+
+// html[lang="th"]  h1 {
+//     @apply text-h1-th;
+// }
+// html[lang="th"]  h2 {
+//     @apply text-h2-th;
+// }
+// html[lang="th"]  h3 {
+//     @apply text-h3-th;
+// }
+// html[lang="th"]  h4 {
+//     @apply text-h4-th;
+// }
+// html[lang="th"]  h5 {
+//     @apply text-h5-th;
+// }
+
+
+
+// html[lang="en"]  display1 {
+//     @apply display-h1-en;
+// }
+// html[lang="en"]  display2 {
+//     @apply display-h2-en;
+// }
+// html[lang="en"]  display3 {
+//     @apply display-h3-en;
+// }
+// html[lang="en"]  display4 {
+//     @apply display-h4-en;
+// }
+// html[lang="en"]  display5 {
+//     @apply display-h5-en;
+// }
+
+// html[lang="th"]  display1 {
+//     @apply text-h1-th;
+// }
+// html[lang="th"]  display2 {
+//     @apply text-h2-th;
+// }
+// html[lang="th"]  display3 {
+//     @apply text-h3-th;
+// }
+// html[lang="th"]  display4 {
+//     @apply text-h4-th;
+// }
+// html[lang="th"]  display5 {
+//     @apply text-h5-th;
+// }
+
+
+// html[lang="en"]  lead-paragraph {
+//     @apply text-lead-paragraph-en;
+// }
+// html[lang="en"]  paragraph {
+//     @apply text-paragraph-en;
+// }
+// html[lang="en"]  small-paragraph {
+//     @apply text-small-paragraph-en;
+// }
+
+// html[lang="th"]  lead-paragraph {
+//     @apply text-lead-paragraph-th;
+// }
+// html[lang="th"]  paragraph {
+//     @apply text-paragraph-th;
+// }
+// html[lang="th"]  small-paragraph {
+//     @apply text-small-paragraph-th;
+// }
+
+
+
+/* English Headings */
+h1[lang="en"] {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+  
+  h2[lang="en"] {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+  
+  h3[lang="en"] {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+  }
+  
+  h4[lang="en"] {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+  
+  h5[lang="en"] {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+  
+  /* Thai Headings */
+  h1[lang="th"] {
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+  
+  h2[lang="th"] {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+  
+  h3[lang="th"] {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 500;
+  }
+  
+  h4[lang="th"] {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+  
+  h5[lang="th"] {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+  
+  
+/* English (default) styles for mobile screens */
+@media screen and (max-width: 767px) {
+    html[lang="en"] {
+      /* Apply styles specifically for English language on small screens */
+      font-size: 16px;
+    }
+  
+    html[lang="en"] .display2 {
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 700;
+    }
+  
+    html[lang="en"] .display3 {
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 700;
+    }
+  }
+  
+  /* English (default) styles for larger screens */
+  @media screen and (min-width: 768px) {
+    html[lang="en"] {
+      /* Apply styles specifically for English language on larger screens */
+      font-size: 18px;
+    }
+  
+    html[lang="en"] .display2 {
+      font-size: 64px;
+      line-height: 72px;
+      font-weight: 700;
+    }
+  
+    html[lang="en"] .display3 {
+      font-size: 48px;
+      line-height: 56px;
+      font-weight: 700;
+    }
+  }
+  
+  /* Thai styles for mobile screens */
+  @media screen and (max-width: 767px) {
+    html[lang="th"] {
+      /* Apply styles specifically for Thai language on small screens */
+      font-size: 16px;
+    }
+  
+    html[lang="th"] .display2 {
+      font-size: 56px;
+      line-height: 48px;
+      font-weight: 700;
+    }
+  
+    html[lang="th"] .display3 {
+      font-size: 48px;
+      line-height: 40px;
+      font-weight: 700;
+    }
+  }
+  
+  /* Thai styles for larger screens */
+  @media screen and (min-width: 768px) {
+    html[lang="th"] {
+      /* Apply styles specifically for Thai language on larger screens */
+      font-size: 18px;
+    }
+  
+    html[lang="th"] .display2 {
+      font-size: 96px;
+      line-height: 72px;
+      font-weight: 700;
+    }
+  
+    html[lang="th"] .display3 {
+      font-size: 72px;
+      line-height: 56px;
+      font-weight: 700;
+    }
+  }
+  
+  
+  /* Lead Paragraph and Paragraph Text */
+  .lead-paragraph,
+  .paragraph {
+    font-weight: 400;
+  }
+  
+  .lead-paragraph[lang="en"],
+  .paragraph[lang="en"] {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  
+  .lead-paragraph[lang="th"],
+  .paragraph[lang="th"] {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  
+  /* Small Paragraph Text */
+  .small-paragraph[lang="en"] {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  
+  .small-paragraph[lang="th"] {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  
+  /* Button Text */
+  .button[lang="en"] {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+  
+  .button[lang="th"] {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+
+  

@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+// import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Switch } from '@/components/lang/switch';
+import { Footer } from "@/components/layouts/footer/footer"
+import { getI18n } from '@/hooks/useI18nServer';
+import '@/styles/globals.scss'; 
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { SourceSansPro, DBHelvethaicaX, Publico } from '@/styles/fonts';
+import {getCurrentLocale} from '@/hooks/useI18nServer';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,12 +18,12 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getCurrentLocale()
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang={locale}>
+      <body className={`${DBHelvethaicaX.variable} ${SourceSansPro.variable} ${Publico.variable} ${locale === 'th' ? DBHelvethaicaX.className : SourceSansPro.className}`}>
         {children}
+      <Footer />
       </body>
     </html>
   );

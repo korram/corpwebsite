@@ -10,7 +10,7 @@ export default function Header() {
       <header className="w-full">
         <TopHeader />
         <div className="w-full border-b bg-white">
-          <div className="mx-auto max-w-[1440px]">
+          <div className="mx-auto xl:max-w-screen-xl">
             <div className="flex h-16 items-center justify-between px-4">
               {/* Logo */}
               <Link href="/" className="flex items-center">

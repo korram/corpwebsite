@@ -1,16 +1,20 @@
+"use client"
+
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { useChangeLocale } from '@/hooks/useI18nClient';
 
 export function TopHeader() {
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const changeLocale = useChangeLocale(/* { preserveSearchParams: true } */);
+
   return (
     <div className="hidden xl:block w-full bg-[#fafafa] border-b border-[#cccccc]">
-      <div className="mx-auto max-w-[1440px] px-4">
-        <div className="flex h-10 items-center justify-end gap-3">
-          <Link
-            href="/axa-academy"
-            className="flex items-center gap-1 text-xs text-[#343c3d] hover:text-[#00008f] transition-colors group"
-          >
-            <span>AXA ACADEMY</span>
+      <div className="mx-auto xl:max-w-screen-xl px-4">
+        <div className="flex h-10 items-center justify-end gap-6">
+          <Link href="/axa-academy" className="text-xs text-[#343c3d] hover:text-[#00008f] transition-colors">
+            AXA ACADEMY
           </Link>
 
           <div className="h-4 border-l border-[#cccccc] mx-2"></div>
@@ -23,15 +27,14 @@ export function TopHeader() {
                               className="w-auto"
                             />
              </div>
-          <div className="relative group">
+          <div className="relative">
             <button
-              className="flex items-center gap-2 text-xs text-[#343c3d] hover:text-[#00008f] transition-colors"
-              aria-haspopup="true"
-              aria-expanded="false"
+              onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+              className="flex items-center gap-1 text-xs text-[#343c3d] hover:text-[#00008f] transition-colors"
             >
               <span>ENGLISH</span>
               <svg
-                className="w-4 h-4 transition-transform group-hover:rotate-180"
+                className={`w-4 h-4 transition-transform ${isLanguageOpen ? "rotate-180" : ""}`}
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -43,20 +46,25 @@ export function TopHeader() {
               </svg>
             </button>
 
-            <div className="absolute top-full right-0 mt-1 w-32 bg-white shadow-lg rounded-md overflow-hidden z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              <Link
-                href="/en"
-                className="flex items-center gap-2 w-full px-4 py-2 text-left text-sm text-[#343c3d] hover:bg-[#fafafa] transition-colors"
+            {isLanguageOpen && (
+              <div
+                className="absolute top-full right-0 mt-1 w-32 bg-white shadow-lg rounded-md overflow-hidden z-50"
+                onMouseLeave={() => setIsLanguageOpen(false)}
               >
-                ENGLISH
-              </Link>
-              <Link
-                href="/th"
-                className="flex items-center gap-2 w-full px-4 py-2 text-left text-sm text-[#343c3d] hover:bg-[#fafafa] transition-colors"
-              >
-                ไทย
-              </Link>
-            </div>
+                <button
+                  onClick={() => {changeLocale('en'); setIsLanguageOpen(false)}}
+                  className="w-full px-4 py-2 text-left text-sm text-[#343c3d] hover:bg-[#fafafa] transition-colors"
+                >
+                  ENGLISH
+                </button>
+                <button
+                  onClick={() => {changeLocale('th');   setIsLanguageOpen(false)}}
+                  className="w-full px-4 py-2 text-left text-sm text-[#343c3d] hover:bg-[#fafafa] transition-colors"
+                >
+                  ไทย
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
