@@ -1,21 +1,17 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-      {
-        "name": "Next.js Development",
-        "type": "node",
-        "request": "launch",
-        "skipFiles": ["<node_internals>/**"],
-        "runtimeExecutable": "npm",
-        "runtimeArgs": [
-          "run",
-          "dev"
-        ],
-        "port": 3000,
-        "console": "integratedTerminal",
-        "timeout": 30000,
-        "sourceMaps": true
-      }
-    ]
-  }
-  
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Next.js Development",
+      "type": "node",
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"],
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 3000,
+      "console": "integratedTerminal",
+      "timeout": 30000,
+      "sourceMaps": true
+    }
+  ]
+}

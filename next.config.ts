@@ -1,21 +1,12 @@
-// import type { NextConfig } from "next";
-
-// const nextConfig: NextConfig = {
-//   i18n: {
-//     defaultLocale: 'th',
-//     locales: ['th','en'],
-//     localeDetection: false,
-//   },
-//   reloadOnPrerender: process.env.NODE_ENV === 'development',
-// };
-
-// export default nextConfig;
-
-
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
     domains: ["images.axa-contento-118412.eu"], // Add the hostname here
+        remotePatterns: [
+          {
+            protocol: "https",
+            hostname: "images.axa-contento-118412.eu",
+          },
+        ],
   },
   transpilePackages: ['next-international', 'international-types'],
   eslint: {

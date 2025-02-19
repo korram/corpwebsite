@@ -1,25 +1,28 @@
 import Header from "@/components/layouts/header";
+import { getI18n } from '@/hooks/useI18nServer';
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
 
+  const t = await getI18n();
   return (
     <div>
      <Header/>
      <div className="p-6">
-  {/* ใช้ฟอนต์ Publico */}
-  <h1 className="text-h1">This is an English Display</h1>
-      <h2  className="text-h2">Large Heading EN</h2>
+    <h1>H1: {t('hello')}</h1>
+    <h2>H2: {t('hello')}</h2>
+    <h3>H3: {t('hello')}</h3>
+    <h4>H4: {t('hello')}</h4>
+    <h5>HellH5o: {t('hello')}</h5><br/><br/>
 
-      {/* Display ภาษาไทย ใช้ DB HelvethaicaX */}
-      <h1 className="text-h1">นี่คือ Display ภาษาไทย</h1>
-      <h2 className="text-h2" >หัวข้อใหญ่ ภาษาไทย</h2>
+    <p className="lead-paragraph">Lead paragraph: {t('hello')}</p>
+    <p>paragraph: {t('hello')}</p>
+    <p className="small-paragraph">Small paragraph: {t('hello')}</p><br/><br/>
 
-  {/* ใช้ฟอนต์ SansSerifPro */}
-  <p className="text-5xl font-bold">Display 1</p>
-  <p className="text-4xl">Display 2</p>
 
-  {/* ใช้ฟอนต์ DB Helvethaica X สำหรับภาษาไทย */}
-  <p className="text-xl">สวัสดีครับ นี่คือข้อความภาษาไทย</p>
+    <span className="display2">Display2 : {t('hello')}</span><br/>
+    <span className="display3">Display3 : {t('hello')}</span><br/>
+    <span className="display4">Display4 : {t('hello')}</span><br/>
+    <span className="display6">Display6 : {t('hello')}</span><br/>
 </div>
     </div>
   );
