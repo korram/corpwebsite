@@ -2,8 +2,8 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { NavigationLinks } from "@/components/layouts/navbar/nav-links"
-import { MobileSubmenu } from "@/components/layouts/navbar/mobile-submenu"
+import { NavigationLinks } from "./nav-links"
+import { MobileSubmenu } from "./mobile-submenu"
 
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false)

@@ -5,11 +5,11 @@ export const { useI18n, useScopedI18n, I18nProviderClient, useChangeLocale, defi
     {
       en: async () => {
         await new Promise(resolve => setTimeout(resolve, 100));
-        return import('@/locales/en');
+        return import('../locales/en');
       },
       th: async () => {
         await new Promise(resolve => setTimeout(resolve, 100));
-        return import('@/locales/th');
+        return import('../locales/th');
       },
     },
   );

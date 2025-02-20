@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { useChangeLocale } from '@/hooks/useI18nClient';
+import { useChangeLocale } from '../../../hooks/useI18nClient';
 
 export function TopHeader() {
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);

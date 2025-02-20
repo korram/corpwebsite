@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Footer } from "@/components/layouts/footer/footer"
-import { getI18n } from '@/hooks/useI18nServer';
+import { Footer } from "../components/layouts/footer/footer"
 import '@/styles/globals.scss'; 
 
-import { SourceSansPro, DBHelvethaicaX, Publico } from '@/styles/fonts';
-import {getCurrentLocale} from '@/hooks/useI18nServer';
+import { SourceSansPro, DBHelvethaicaX, Publico } from '../styles/fonts';
+import {getCurrentLocale} from '../hooks/useI18nServer';
 
 export const metadata: Metadata = {
   title: "Create Next App",

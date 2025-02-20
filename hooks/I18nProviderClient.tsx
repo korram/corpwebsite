@@ -1,7 +1,7 @@
 'use client';
 
 import type { ReactNode } from 'react';
-import { I18nProviderClient } from '@/hooks/useI18nClient';
+import { I18nProviderClient } from './useI18nClient';
 
 type ProviderProps = {
   locale: string;

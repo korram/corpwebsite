@@ -1,5 +1,5 @@
-import Header from "@/components/layouts/header";
-import { getI18n } from '@/hooks/useI18nServer';
+import Header from "../../components/layouts/header";
+import { getI18n } from '../../hooks/useI18nServer';
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
 

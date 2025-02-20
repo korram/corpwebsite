@@ -2,8 +2,8 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { NavigationLinks } from "@/components/layouts/navbar/nav-links"
-import { DesktopSubMenu } from "@/components/layouts/navbar/desktop-submenu"
+import { NavigationLinks } from "./nav-links"
+import { DesktopSubMenu } from "./desktop-submenu"
 
 // export function DesktopMenu() {
 //   const [activeMenu, setActiveMenu] = useState<string | null>(null)
