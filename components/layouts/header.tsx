@@ -1,7 +1,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { TopHeader } from "./navbar/top-header"
+import { TopHeader } from "./navbar/TopHeader"
 import { MobileMenu } from "./navbar/mobile-menu"
 import { DesktopMenu } from "./navbar/desktop-menu"
 

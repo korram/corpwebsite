@@ -3,18 +3,18 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { useChangeLocale } from '../../../hooks/useI18nClient';
+import { useChangeLocale, useCurrentLocale, useI18n } from '../../../hooks/useI18nClient';
 
 export function TopHeader() {
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const changeLocale = useChangeLocale(/* { preserveSearchParams: true } */);
-
+const locale = useCurrentLocale();
   return (
     <div className="hidden xl:block w-full bg-[#fafafa] border-b border-[#cccccc]">
       <div className="mx-auto xl:max-w-screen-xl px-4">
         <div className="flex h-10 items-center justify-end gap-6">
           <Link href="/axa-academy" className="text-xs text-[#343c3d] hover:text-[#00008f] transition-colors">
-            AXA ACADEMY
+            AXA ACADEMY - {locale}
           </Link>
 
           <div className="h-4 border-l border-[#cccccc] mx-2"></div>
