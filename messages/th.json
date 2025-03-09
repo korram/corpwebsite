@@ -1,9 +1,8 @@
-console.log('Loaded EN');
-
-export default {
-  "insurOnline": "Buy Online",
-  hello: 'Hello',
-  welcome: 'Hello {name}!',
+{
+  "insurOnline" : "ซื้อประกันออนไลน์",
+  "hello": "สวัสดี1",
+  "title": "สวัสดี1",
+  "welcome": "สวัสดี {name}!1",
   "topBar": {
     "training": "Agent Training and Development"
   },
@@ -21,4 +20,4 @@ export default {
     "welcome": "Welcome to AXA Thailand",
     "description": "Discover our range of insurance products and services designed to protect what matters to you."
   }
-} as const;
+} 

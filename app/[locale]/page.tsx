@@ -1,13 +1,14 @@
-import Header from "../../components/layouts/header";
-import { getI18n } from '../../hooks/useI18nServer';
+import Header from "../../components/layouts/Header";
+import { useI18n } from '@/hooks/useI18n';
+export default  function Home({ params }: { params: Promise<{ locale: string }> }) {
 
-export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
 
-  const t = await getI18n();
+
+  const t =  useI18n();
   return (
     <div>
      <Header/>
-     <div className="p-6">
+     <div className="p-6">fds
     <h1>H1: {t('hello')}</h1>
     <h2>H2: {t('hello')}</h2>
     <h3>H3: {t('hello')}</h3>

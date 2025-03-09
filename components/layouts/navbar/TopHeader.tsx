@@ -3,12 +3,15 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { useChangeLocale, useCurrentLocale, useI18n } from '../../../hooks/useI18nClient';
+import { useCurrentLocale } from '@/hooks/useI18n';
+import { useChangeLocale } from '@/hooks/useI18nClient';
+
 
 export function TopHeader() {
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-  const changeLocale = useChangeLocale(/* { preserveSearchParams: true } */);
-const locale = useCurrentLocale();
+  const { changeLocale } = useChangeLocale();
+  const locale = useCurrentLocale();
+
   return (
     <div className="hidden xl:block w-full bg-[#fafafa] border-b border-[#cccccc]">
       <div className="mx-auto xl:max-w-screen-xl px-4">
@@ -16,7 +19,6 @@ const locale = useCurrentLocale();
           <Link href="/axa-academy" className="text-xs text-[#343c3d] hover:text-[#00008f] transition-colors">
             AXA ACADEMY - {locale}
           </Link>
-
           <div className="h-4 border-l border-[#cccccc] mx-2"></div>
           <div>
             <Image
@@ -32,7 +34,7 @@ const locale = useCurrentLocale();
               onClick={() => setIsLanguageOpen(!isLanguageOpen)}
               className="flex items-center gap-1 text-xs text-[#343c3d] hover:text-[#00008f] transition-colors"
             >
-              <span>ENGLISH</span>
+              <span>{locale}</span>
               <svg
                 className={`w-4 h-4 transition-transform ${isLanguageOpen ? "rotate-180" : ""}`}
                 fill="none"

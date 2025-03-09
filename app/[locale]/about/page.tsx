@@ -1,9 +1,9 @@
-import Header from "@/components/layouts/header";
-import { getI18n } from '@/hooks/useI18nServer';
+import Header from "@/components/layouts/Header";
+import { useI18n } from '@/hooks/useI18n';
 
-export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+export default  function Home({ params }: { params: Promise<{ locale: string }> }) {
 
-  const t = await getI18n();
+  const t =  useI18n();
   return (
     <div>
      <Header/>ABOUT
