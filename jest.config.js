@@ -219,8 +219,12 @@ const config = {
   //   '^.+\\.(ts|tsx|js|jsx)$': 'ts-jest',
   // },
   // transformIgnorePatterns: ['/node_modules/'],
+  // transform: {
+  //   '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }], // Transpile JSX & TypeScript
+  // },
+
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }], // Transpile JSX & TypeScript
+    "^.+\\.(ts|tsx|js|jsx)$": "babel-jest"
   },
   transformIgnorePatterns: ['/node_modules/(?!(module-you-need-to-transform)/)'], // Ensure dependencies are processed
 };

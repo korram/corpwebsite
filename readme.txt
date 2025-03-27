@@ -1,3 +1,5 @@
+npm update react react-dom next @testing-library/react jest babel-jest
+
 
 npm install --save-dev @babel/preset-react @babel/preset-env @babel/preset-typescript babel-jest
 npm install -D jest jest-environment-jsdom @testing-library/react @testing-library/dom @testing-library/jest-dom ts-node
@@ -21,3 +23,4 @@ module.exports = {
 
 
 npm install @babel/preset-react@latest
+
