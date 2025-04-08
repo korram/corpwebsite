@@ -18,11 +18,31 @@ jest.mock('@/hooks/useI18nClient', () => ({
 }));
 
 describe('TopHeader component', () => {
-  it('renders the language dropdown', async () => {
+  
+  beforeEach(() => {
     (useCurrentLocale as jest.Mock).mockImplementation(() => 'en');
+  });
+
+  it('renders the language dropdown', async () => {
     const { getByText } = render(<TopHeader />);
     expect(getByText('AXA ACADEMY - en')).toBeInTheDocument();
   });
+
+});
+
+describe('TopHeader component', () => {
+
+  beforeEach(() => {
+    (useCurrentLocale as jest.Mock).mockImplementation(() => 'th');
+  });
+
+  it('renders the language dropdown', async () => {
+    const { getByText } = render(<TopHeader />);
+    expect(getByText('AXA ACADEMY - th')).toBeInTheDocument();
+  });
+
+});
+
 
   // it('calls the changeLocale function when the language is changed', async () => {
   //   const changeLocale = jest.fn();
@@ -33,4 +53,3 @@ describe('TopHeader component', () => {
   //   fireEvent.click(languageButton);
   //   await waitFor(() => expect(changeLocale).toHaveBeenCalledTimes(1));
   // });
-});
